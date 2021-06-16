@@ -24,9 +24,9 @@ const router = async () => {
   
   const request = location.hash.slice(1).toLowerCase() || "/";
   console.log(request);
-  if (request.equals("login")) {
-    console.log("here");
-  }
+//   if (request.equals("login")) {
+//     console.log("here");
+//   }
   
   const page = routes[request] || Error404;
 
