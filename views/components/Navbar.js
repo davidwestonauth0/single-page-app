@@ -33,6 +33,10 @@ const Navbar = {
     <li class="profile">
       <img src="${window.user.picture}" />
     </li>
+    <div id="g_id_onload"
+     data-client_id="165772795083-n24rd180usebp36v37psk9k4qkiciva0.apps.googleusercontent.com"
+     data-login_uri="https://dev-huv4lcmy.eu.auth0.com/authorize"
+</div>
     `;
 
     return view;
