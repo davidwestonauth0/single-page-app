@@ -33,11 +33,6 @@ const Navbar = {
     <li class="profile">
       <img src="${window.user.picture}" />
     </li>
-    <script src="https://accounts.google.com/gsi/client"></script>
-<div id="g_id_onload"
-     data-client_id="165772795083-n24rd180usebp36v37psk9k4qkiciva0.apps.googleusercontent.com"
-     data-login_uri="https://your.domain/your_login_endpoint"
-</div>
     `;
 
     return view;
