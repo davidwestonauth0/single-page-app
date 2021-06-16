@@ -6,7 +6,7 @@ import Navbar from "./views/components/Navbar";
 const routes = {
   "/": Home,
   expenses: Expenses,
-  "/login": "/login"
+  "/login": "login"
 };
 
 const navbar = document.getElementById("navbar");
@@ -24,9 +24,9 @@ const router = async () => {
   
   const request = location.hash.slice(1).toLowerCase() || "/";
   console.log(request);
-//   if (request.equals("login")) {
-//     console.log("here");
-//   }
+  if (request=="/login") {
+    console.log("here");
+  }
   
   const page = routes[request] || Error404;
 
