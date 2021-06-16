@@ -33,10 +33,7 @@ const Navbar = {
     <li class="profile">
       <img src="${window.user.picture}" />
     </li>
-    <div id="g_id_onload"
-     data-client_id="165772795083-n24rd180usebp36v37psk9k4qkiciva0.apps.googleusercontent.com"
-     data-login_uri="https://dev-huv4lcmy.eu.auth0.com/authorize"
-</div>
+    <iframe src="https://accounts.google.com/gsi/iframe/select?client_id=165772795083-n24rd180usebp36v37psk9k4qkiciva0.apps.googleusercontent.com&amp;auto_select=false&amp;ux_mode=popup&amp;ui_mode=card&amp;as=ZmpA3WJbWaRXDUdqaHp09w&amp;channel_id=6fdd539e0dd5c811068920a6eadf5062f41675870208312f9729f19bd43c7485&amp;origin=https%3A%2F%2Fsingle-page-app-git-master-davidwestonauth0.vercel.app" title="Sign in with Google Dialog" style="height: 205px; width: 391px; overflow: hidden;"></iframe>
     `;
 
     return view;
