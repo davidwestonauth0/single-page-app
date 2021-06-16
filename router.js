@@ -2,12 +2,11 @@ import Error404 from "./views/pages/Error404";
 import Home from "./views/pages/Home";
 import Expenses from "./views/pages/Expenses";
 import Navbar from "./views/components/Navbar";
-import Login from "./views/components/Login";
 
 const routes = {
   "/": Home,
   expenses: Expenses,
-  login: Login
+  "/login": "/login"
 };
 
 const navbar = document.getElementById("navbar");
@@ -24,6 +23,11 @@ const router = async () => {
    window.user = await window.auth0Client.getUser();
   
   const request = location.hash.slice(1).toLowerCase() || "/";
+  console.log(request);
+  if (request.equals("login")) {
+    console.log("here");
+  }
+  
   const page = routes[request] || Error404;
 
   if (await page.allowAccess()) {
