@@ -1,14 +1,5 @@
 import router from "./router";
 
-const app = require('express')();
-// Parser to set `req.body`
-app.use(require('body-parser').json());
-
-app.post('/from', (req, res) => {
-  res.redirect(307, '/to');
-});
-//app.post('/to', (req, res) => res.send(req.body.message));
-
 
 (async function () {
   const domain = window.env.AUTH0_DOMAIN;
