@@ -24,7 +24,7 @@ const router = async () => {
   
   const request = location.hash.slice(1).toLowerCase() || "/";
   console.log(request);
-  if (request=="/login") {
+  if (request=="login") {
     console.log("here");
   }
   
