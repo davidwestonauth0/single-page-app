@@ -1,16 +1,9 @@
 
-// default user
-window.user = {
-  name: "Anonymous",
-  picture: profile,
-};
-
 const OneTap = {
   render: async () => {
     const isAuthenticated = await window.auth0Client.isAuthenticated();
 
     const view = /*html*/ `
-        <script src="https://accounts.google.com/gsi/client"></script>
         <h1>test</h1>
     <div id="g_id_onload"
        data-client_id="165772795083-n24rd180usebp36v37psk9k4qkiciva0.apps.googleusercontent.com"
@@ -22,7 +15,7 @@ const OneTap = {
     `;
 
     return view;
-  },
+  }
 };
 
 export default OneTap;
