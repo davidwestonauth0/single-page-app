@@ -11,7 +11,7 @@ const routes = {
 
 const navbar = document.getElementById("navbar");
 const content = document.getElementById("content");
-const onetap = document.getElementsByTagName('body')[0];
+const onetap = document.getElementById('g_id_onload');
 
 const router = async () => {
   
@@ -53,6 +53,8 @@ const router = async () => {
 
   navbar.innerHTML = await Navbar.render();
   await Navbar.postRender();
+  
+  onetap.innerHTML = '<div>test</div>'
 };
 
 export default router;
