@@ -5,6 +5,7 @@
 */
 (function (window) {
   let API_URL = process.env.API_URL || "http://localhost:5000";
+  let GOOGLE_CLIENT = process.env.GOOGLE_CLIENT || "http://localhost:5000";
   let APP_URL = "http://localhost:8000";
   const AUTH0_DOMAIN = process.env.AUTH0_DOMAIN;
   const CLIENT_ID = process.env.CLIENT_ID;
@@ -23,6 +24,7 @@
   window.env = {
     APP_URL,
     API_URL,
+    GOOGLE_CLIENT,
     AUTH0_DOMAIN,
     CLIENT_ID,
   };
@@ -36,6 +38,7 @@
   console.log(`%cAPI_URL=${API_URL}`, "font-weight: bold;");
   console.log(`%cAUTH0_DOMAIN=${AUTH0_DOMAIN}`, "font-weight: bold;");
   console.log(`%cCLIENT_ID=${CLIENT_ID}`, "font-weight: bold;");
+  console.log(`%cGOOGLE_CLIENT=${GOOGLE_CLIENT}`, "font-weight: bold;");
   console.log(
     "%c-------------------------------------------",
     "font-weight: bold;"
