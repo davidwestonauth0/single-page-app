@@ -31,6 +31,7 @@
   </script>
   <script>
     console.log(window.auth0Client);
+    console.log(window.auth0Client.isAuthenticated());
     //const isAuthenticated = await window.auth0Client.isAuthenticated();
     //console.log(isAuthenticated);
     var loc = process.env.API_URL;
