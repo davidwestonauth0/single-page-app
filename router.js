@@ -40,7 +40,9 @@ const router = async () => {
 
   if (await window.auth0Client.isAuthenticated()) {
    window.user = await window.auth0Client.getUser();
+    try {
    document.getElementById("g_id_onload").remove();
+    } catch(err) {}
   }
 
   
