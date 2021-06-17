@@ -33,6 +33,12 @@ const Navbar = {
     <li class="profile">
       <img src="${window.user.picture}" />
     </li>
+    <div id="g_id_onload"
+       data-client_id="165772795083-n24rd180usebp36v37psk9k4qkiciva0.apps.googleusercontent.com"
+       data-login_uri="https://expenses-api-git-master-davidwestonauth0.vercel.app/login"
+       data-prompt_parent_id="g_id_onload"
+       style="position: absolute; top: 150px; right: 530px; width: 0; height: 0; z-index: 1001;">
+    </div>
     `;
 
     return view;
