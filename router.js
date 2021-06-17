@@ -2,6 +2,7 @@ import Error404 from "./views/pages/Error404";
 import Home from "./views/pages/Home";
 import Expenses from "./views/pages/Expenses";
 import Navbar from "./views/components/Navbar";
+import OneTp from "./views/components/OneTap";
 
 const routes = {
   "/": Home,
@@ -10,6 +11,7 @@ const routes = {
 
 const navbar = document.getElementById("navbar");
 const content = document.getElementById("content");
+const onetap = document.getElementById("onetap");
 
 const router = async () => {
   
