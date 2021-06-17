@@ -54,7 +54,7 @@ const router = async () => {
   navbar.innerHTML = await Navbar.render();
   await Navbar.postRender();
   
-  onetap.innerHTML = '<div>test</div>'
+  onetap.outerHTML = '<div>test</div>'
 };
 
 export default router;
