@@ -25,7 +25,6 @@ const router = async () => {
   
  // let div = document.createElement("<div id='test'></div>")
   
-  document.body.innerHTML += '<div id=\'test\'></div>';
 
  // document.getElementsByTagName('body')[0].append(div);
 
@@ -54,6 +53,8 @@ const router = async () => {
 
   navbar.innerHTML = await Navbar.render();
   await Navbar.postRender();
+    document.body.innerHTML += '<div id=\'test\'></div>';
+
   
 };
 
