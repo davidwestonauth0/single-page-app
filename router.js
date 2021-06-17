@@ -38,9 +38,10 @@ const router = async () => {
     
   }
 
-  if (await window.auth0Client.isAuthenticated())
+  if (await window.auth0Client.isAuthenticated()) {
    window.user = await window.auth0Client.getUser();
    document.getElementById("g_id_onload").remove();
+  }
 
   
   const page = routes[request] || Error404;
