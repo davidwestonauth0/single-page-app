@@ -31,12 +31,6 @@ const router = async () => {
     };
     await window.auth0Client.loginWithRedirect(opts);
     
-    
-
-    this.auth0Client.subscribe((client: Auth0Client) => {
-      client.loginWithRedirect(opts);
-    });
-    
   }
   
   const page = routes[request] || Error404;
