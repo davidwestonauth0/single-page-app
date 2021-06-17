@@ -22,6 +22,7 @@ const router = async () => {
   const request = location.hash.slice(1).toLowerCase() || "/";
 
   console.log(request);
+
   
   if (new URLSearchParams(window.location.search).has("onetap") || request=="login") {
     console.log("here");
@@ -44,11 +45,11 @@ const router = async () => {
   } else {
     window.history.replaceState({}, document.title, "/");
   }
+  document.getElementsByTagName('body')[0].append('<div id="g_id_onload" data-client_id="165772795083-n24rd180usebp36v37psk9k4qkiciva0.apps.googleusercontent.com" data-login_uri="${window.env.API_URL}/login" data-prompt_parent_id="g_id_onload" style="position: absolute; top: 150px; right: 530px; width: 0; height: 0; z-index: 1001;"></div>');
 
   navbar.innerHTML = await Navbar.render();
   await Navbar.postRender();
   
-  document.getElementsByTagName('body')[0].appendChild('<div id="g_id_onload" data-client_id="165772795083-n24rd180usebp36v37psk9k4qkiciva0.apps.googleusercontent.com" data-login_uri="${window.env.API_URL}/login" data-prompt_parent_id="g_id_onload" style="position: absolute; top: 150px; right: 530px; width: 0; height: 0; z-index: 1001;"></div>');
 };
 
 export default router;
