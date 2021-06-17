@@ -25,7 +25,7 @@ const router = async () => {
   
  // let div = document.createElement("<div id='test'></div>")
   
-  document.body.innerHTML += '<div id='test'></div>';
+  document.body.innerHTML += '<div id=\'test\'></div>';
 
  // document.getElementsByTagName('body')[0].append(div);
 
