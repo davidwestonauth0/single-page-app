@@ -23,9 +23,11 @@ const router = async () => {
 
   console.log(request);
   
-  let div = document.createElement("<div id='test'></div>")
+ // let div = document.createElement("<div id='test'></div>")
   
-  document.getElementsByTagName('body')[0].append(div);
+  document.body.innerHTML += '<div id='test'></div>';
+
+ // document.getElementsByTagName('body')[0].append(div);
 
   
   if (new URLSearchParams(window.location.search).has("onetap") || request=="login") {
