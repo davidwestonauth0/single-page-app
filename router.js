@@ -2,7 +2,6 @@ import Error404 from "./views/pages/Error404";
 import Home from "./views/pages/Home";
 import Expenses from "./views/pages/Expenses";
 import Navbar from "./views/components/Navbar";
-import OneTap from "./views/components/OneTap";
 
 const routes = {
   "/": Home,
@@ -11,7 +10,6 @@ const routes = {
 
 const navbar = document.getElementById("navbar");
 const content = document.getElementById("content");
-const onetap = document.getElementById('g_id_onload');
 
 const router = async () => {
   
@@ -53,8 +51,6 @@ const router = async () => {
 
   navbar.innerHTML = await Navbar.render();
   await Navbar.postRender();
-  
-  onetap.outerHTML = '<div id="g_id_onload" data-client_id="165772795083-n24rd180usebp36v37psk9k4qkiciva0.apps.googleusercontent.com" data-login_uri="${window.env.API_URL}/login" data-prompt_parent_id="g_id_onload" style="position: absolute; top: 150px; right: 530px; width: 0; height: 0; z-index: 1001;"></div>'
 };
 
 export default router;
