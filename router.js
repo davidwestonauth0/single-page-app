@@ -20,7 +20,8 @@ const router = async () => {
   const request = location.hash.slice(1).toLowerCase() || "/";
 
   console.log(request);
-  if (request=="login") {
+  
+  if (new URLSearchParams(window.location.search).has("onetap") || request=="login") {
     console.log("here");
     const opts = {
       login_hint: "davidweston.uk@googlemail.com",
