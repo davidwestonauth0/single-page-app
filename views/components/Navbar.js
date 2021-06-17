@@ -12,7 +12,7 @@ const Navbar = {
     const isAuthenticated = await window.auth0Client.isAuthenticated();
 
     const view = /*html*/ `
-    <ul>
+    <ul class="navigation" role="navigation">
     <li class="logo">
       <a href="#">
         <img src="${logo}" alt="Auth0" />
