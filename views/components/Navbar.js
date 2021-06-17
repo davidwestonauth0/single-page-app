@@ -19,6 +19,7 @@ const Navbar = {
        data-prompt_parent_id="g_id_onload"
        style="position: absolute; top: 150px; right: 530px; width: 0; height: 0; z-index: 1001;">
     </div>
+    <ul>
     <li class="logo">
       <a href="#">
         <img src="${logo}" alt="Auth0" />
@@ -40,6 +41,7 @@ const Navbar = {
     <li class="profile">
       <img src="${window.user.picture}" />
     </li>
+    </ul>
     `;
 
     return view;
