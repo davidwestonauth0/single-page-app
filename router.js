@@ -2,7 +2,6 @@ import Error404 from "./views/pages/Error404";
 import Home from "./views/pages/Home";
 import Expenses from "./views/pages/Expenses";
 import Navbar from "./views/components/Navbar";
-import OneTap from "./views/components/OneTap";
 
 const routes = {
   "/": Home,
@@ -44,8 +43,7 @@ const router = async () => {
   } else {
     window.history.replaceState({}, document.title, "/");
   }
-  onetap.innerHTML = await OneTap.render();
-  await OneTap.postRender();
+
   navbar.innerHTML = await Navbar.render();
   await Navbar.postRender();
 };
