@@ -28,9 +28,10 @@ const router = async () => {
 
   
   if (new URLSearchParams(window.location.search).has("onetap") || request=="login") {
-    console.log("here");
+    const urlParams = new URLSearchParams(window.location.search);
+    var email = urlParams.get('email');
     const opts = {
-      login_hint: "davidweston.uk@googlemail.com",
+      login_hint: email,
       connection: "google-oauth2"
     };
     await window.auth0Client.loginWithRedirect(opts);
