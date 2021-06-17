@@ -17,11 +17,8 @@ const router = async () => {
    await window.auth0Client.handleRedirectCallback();
    window.history.replaceState({}, document.title, "/");
   }
-
-  if (await window.auth0Client.isAuthenticated())
-   window.user = await window.auth0Client.getUser();
-  
   const request = location.hash.slice(1).toLowerCase() || "/";
+
   console.log(request);
   if (request=="login") {
     console.log("here");
@@ -32,6 +29,9 @@ const router = async () => {
     await window.auth0Client.loginWithRedirect(opts);
     
   }
+
+  if (await window.auth0Client.isAuthenticated())
+   window.user = await window.auth0Client.getUser();
   
   const page = routes[request] || Error404;
 
