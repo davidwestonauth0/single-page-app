@@ -25,6 +25,18 @@ const router = async () => {
   console.log(request);
   if (request=="login") {
     console.log("here");
+    const opts = {
+      login_hint: "davidweston.uk@googlemail.com",
+      connection: "google-oauth2"
+    };
+    await window.auth0Client.loginWithRedirect(opts);
+    
+    
+
+    this.auth0Client.subscribe((client: Auth0Client) => {
+      client.loginWithRedirect(opts);
+    });
+    
   }
   
   const page = routes[request] || Error404;
